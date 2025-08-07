@@ -1,0 +1,43 @@
+import React, { useState } from 'react';
+import { Plus } from 'lucide-react';
+
+const TaskForm = ({ onAddTask, darkMode }) => {
+  const [task, setTask] = useState('');
+
+  const handleSubmit = () => {
+    if (task.trim()) {
+      onAddTask(task.trim());
+      setTask('');
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSubmit();
+    }
+  };
+
+  return (
+    <div className="task-form">
+      <div className="form-container">
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          onKeyPress={handleKeyPress}
+          placeholder="Yeni görev ekle..."
+          className="task-input"
+        />
+        <button
+          onClick={handleSubmit}
+          className="add-button"
+        >
+          <Plus size={20} />
+          Ekle
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default TaskForm;
