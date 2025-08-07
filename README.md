@@ -13,7 +13,7 @@ React ve Node.js gibi güncel teknolojiler kullanılarak performanslı ve esnek 
 ## Teknolojiler
 
 - **Frontend:** React, CSS    
-- **Veritabanı: localStorage
+- **Veritabanı:** localStorage
 
 ## Kurulum ve Çalıştırma
 
